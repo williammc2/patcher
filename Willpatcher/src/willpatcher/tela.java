@@ -6,6 +6,7 @@
 package willpatcher;
 
 import java.awt.Desktop;
+import java.awt.List;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,14 +27,17 @@ public class tela extends javax.swing.JFrame {
     String diretorio = null;
     String versao = null;
     String disco = null;
-    ArrayList<String> russo = new ArrayList<>();
-    ArrayList<String> koreano = new ArrayList<>();
+    coreano coreano_lista = new coreano();
+    russo russo_lista = new russo();
+    
 
     /**
      * Creates new form tela
      */
     public tela() {
         initComponents();
+        ArrayList<String> loadlist_russo = russo_lista.getrusso();
+        ArrayList<String> loadlist_coreano = coreano_lista.getcoreano();
 
     }
 
@@ -252,116 +256,7 @@ public class tela extends javax.swing.JFrame {
 
 
     private void botaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoActionPerformed
-
-        // Adicionar o nome de cada aquivo em um String array//
-        russo.add("AbnormalStatusInfo.RUS");
-        russo.add("AccountInfo.RUS");
-        russo.add("AuraInfo.RUS");
-        russo.add("BLEditor.RUS");
-        russo.add("BLEnum.RUS");
-        russo.add("BLGame.RUS");
-        russo.add("ChatCMDInfo.RUS");
-        russo.add("CinematicScript.RUS");
-        russo.add("CombatFlairInfo.RUS");
-        russo.add("CraftInfo.RUS");
-        russo.add("CustomizingInfo.RUS");
-        russo.add("DialogInfo.RUS");
-        russo.add("DoorInfo.RUS");
-        russo.add("Engine.RUS");
-        russo.add("FactionInfo.RUS");
-        russo.add("FellowInfo.RUS");
-        russo.add("GameStringInfo.RUS");
-        russo.add("GatherInfo.RUS");
-        russo.add("Questinfo.RUS");
-        russo.add("GuildInfo.RUS");
-        russo.add("GatherInfo.RUS");
-        russo.add("HelpInfo.RUS");
-        russo.add("InventoryInfo.RUS");
-        russo.add("Item.RUS");
-        russo.add("ItemInfo.RUS");
-        russo.add("LetterInfo.RUS");
-        russo.add("LocationInfo.RUS");
-        russo.add("MissionInfo.RUS");
-        russo.add("MonologInfo.RUS");
-        russo.add("MonsterBookInfo.RUS");
-        russo.add("MountInf.RUS");
-        russo.add("MountInfo.RUS");
-        russo.add("NPCInfo.RUS");
-        russo.add("NPCSkillInfo.RUS");
-        russo.add("OrderInfo.RUS");
-        russo.add("PCParam.RUS");
-        russo.add("PCInfo.RUS");
-        russo.add("PCSkillInfo.RUS");
-        russo.add("PetInfo.RUS");
-        russo.add("PropInfo.RUS");
-        russo.add("ShopInfo.RUS");
-        russo.add("Skill.RUS");
-        russo.add("SocialActionInfo.RUS");
-        russo.add("SystemMailInfo.RUS");
-        russo.add("SystemMessageInfo.RUS");
-        russo.add("TamingInfo.RUS");
-        russo.add("TrapInfo.RUS");
-        russo.add("VoluntaryAction.RUS");
-        russo.add("VoluntaryActionInfo.RUS");
-        russo.add("WarInfo.RUS");
-        russo.add("WaypointStringInfo.RUS");
-        russo.add("WorldInfo.RUS");
-        int size = russo.size();
-        
-        koreano.add("AbnormalStatusInfo.KOR");
-        koreano.add("AccountInfo.KOR");
-        koreano.add("AuraInfo.KOR");
-        koreano.add("BLEditor.KOR");
-        koreano.add("BLEnum.KOR");
-        koreano.add("BLGame.KOR");
-        koreano.add("ChatCMDInfo.KOR");
-        koreano.add("CinematicScript.KOR");
-        koreano.add("CombatFlairInfo.KOR");
-        koreano.add("CraftInfo.KOR");
-        koreano.add("CustomizingInfo.KOR");
-        koreano.add("DialogInfo.KOR");
-        koreano.add("DoorInfo.KOR");
-        koreano.add("Engine.KOR");
-        koreano.add("FactionInfo.KOR");
-        koreano.add("FellowInfo.KOR");
-        koreano.add("GameStringInfo.KOR");
-        koreano.add("GatherInfo.KOR");
-        koreano.add("GFxUI.KOR");
-        koreano.add("GuildInfo.KOR");
-        koreano.add("HelpInfo.KOR");
-        koreano.add("InventoryInfo.KOR");
-        koreano.add("Item.KOR");
-        koreano.add("ItemInfo.KOR");
-        koreano.add("LetterInfo.KOR");
-        koreano.add("LocationInfo.KOR");
-        koreano.add("MissionInfo.KOR");
-        koreano.add("MonologInfo.KOR");
-        koreano.add("MonsterBookInfo.KOR");
-        koreano.add("MountInfo.KOR");
-        koreano.add("NPCInfo.KOR");
-        koreano.add("NPCSkillInfo.KOR");
-        koreano.add("PCInfo.KOR");
-        koreano.add("PCParam.KOR");
-        koreano.add("PCSkillInfo.KOR");
-        koreano.add("PetInfo.KOR");
-        koreano.add("PropInfo.KOR");
-        koreano.add("QuestInfo.KOR");
-        koreano.add("ShopInfo.KOR");
-        koreano.add("Skill.KOR");
-        koreano.add("SkillInfo.KOR");
-        koreano.add("SocialActionInfo.KOR");
-        koreano.add("SystemMailInfo.KOR");
-        koreano.add("SystemMessageInfo.KOR");
-        koreano.add("TamingInfo.KOR");
-        koreano.add("TrapInfo.KOR");
-        koreano.add("VoluntaryAction.KOR");
-        koreano.add("VoluntaryActionInfo.KOR");
-        koreano.add("WarInfo.KOR");
-        koreano.add("WaypointStringInfo.KOR");
-        koreano.add("WorldInfo.KOR");
-        int sizekor = koreano.size();
-        
-        
+    
 
         if (versao == null) {
             JOptionPane.showMessageDialog(null, "Voce não selecionou a versão do jogo, Favor escolha Russo ou koreano.");
@@ -374,16 +269,16 @@ public class tela extends javax.swing.JFrame {
 
                 if (versao == "RUSSO") {
                     if (file.isDirectory()) {
-                        for (int j = 0; j < size; j++) {
+                        for (int j = 0; j < russo_lista.getsize(); j++) {
                             try {
-                                String url2 = "http://mmobrazil.com/patcher_files/" + russo.get(j);
+                                String url2 = "http://mmobrazil.com/patcher_files/" + russo_lista.getLista(j);
                                 URL url = new URL(url2);
-                                String path = russo.get(j) + " Baixando...";
+                                String path = russo_lista.getLista(j) + " Baixando...";
                                 download_tag.setText(path);
                                 download_tag.paintAll(download_tag.getGraphics());
                                 URLConnection conn = url.openConnection();
                                 InputStream in = conn.getInputStream();
-                                FileOutputStream out = new FileOutputStream(diretorio + russo.get(j));
+                                FileOutputStream out = new FileOutputStream(diretorio + russo_lista.getLista(j));
                                 byte[] b = new byte[1024];
                                 int count;
                                 while ((count = in.read(b)) >= 0) {
@@ -408,16 +303,16 @@ public class tela extends javax.swing.JFrame {
                 } else {
                     if (file.isDirectory()) {
 
-                        for (int k = 0; k < sizekor; k++) {
+                        for (int k = 0; k < coreano_lista.getsize(); k++) {
                             try {
-                                String url2 = "http://mmobrazil.com/patcher_files/" + koreano.get(k);
+                                String url2 = "http://mmobrazil.com/patcher_files/" + coreano_lista.getLista(k);
                                 URL url = new URL(url2);
-                                String path = koreano.get(k) + " Baixando...";
+                                String path = coreano_lista.getLista(k) + " Baixando...";
                                 download_tag.setText(path);
                                 download_tag.paintAll(download_tag.getGraphics());
                                 URLConnection conn = url.openConnection();
                                 InputStream in = conn.getInputStream();
-                                FileOutputStream out = new FileOutputStream(diretorio + koreano.get(k));
+                                FileOutputStream out = new FileOutputStream(diretorio + coreano_lista.getLista(k));
                                 byte[] b = new byte[1024];
                                 int count;
                                 while ((count = in.read(b)) >= 0) {
