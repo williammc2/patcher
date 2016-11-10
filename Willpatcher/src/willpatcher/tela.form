@@ -60,7 +60,7 @@
           <Font name="Tahoma" size="10" style="0"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/willpatcher/downloadbutton2.png"/>
+          <Image iconType="3" name="/img/downloadbutton2.png"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -176,7 +176,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/willpatcher/YouTube-icon.png"/>
+          <Image iconType="3" name="/img/YouTube-icon.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
@@ -209,7 +209,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/willpatcher/guild.png"/>
+          <Image iconType="3" name="/img/guild.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -221,7 +221,7 @@
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/willpatcher/logan_guild_low_size.png"/>
+          <Image iconType="3" name="/img/logan_guild_low_size.png"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -238,7 +238,7 @@
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/willpatcher/pagseguro (1).png"/>
+          <Image iconType="3" name="/img/pagseguro (1).png"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -256,7 +256,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/willpatcher/bless-online---woman-keyart-1441069414031_632x300.jpg"/>
+          <Image iconType="3" name="/img/bless-online---woman-keyart-1441069414031_632x300.jpg"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor Padr&#xe3;o"/>

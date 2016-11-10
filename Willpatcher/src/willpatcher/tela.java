@@ -80,7 +80,7 @@ public class tela extends javax.swing.JFrame {
         combobox.setBounds(20, 240, 100, 20);
 
         botao.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        botao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/willpatcher/downloadbutton2.png"))); // NOI18N
+        botao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/downloadbutton2.png"))); // NOI18N
         botao.setBorderPainted(false);
         botao.setContentAreaFilled(false);
         botao.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +131,7 @@ public class tela extends javax.swing.JFrame {
         jLabel8.setBounds(20, 170, 170, 14);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/willpatcher/YouTube-icon.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/YouTube-icon.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
@@ -148,11 +148,11 @@ public class tela extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(490, 90, 210, 14);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/willpatcher/guild.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guild.png"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(40, 110, 80, 20);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/willpatcher/logan_guild_low_size.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logan_guild_low_size.png"))); // NOI18N
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -163,7 +163,7 @@ public class tela extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(20, 30, 130, 90);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/willpatcher/pagseguro (1).png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pagseguro (1).png"))); // NOI18N
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -175,7 +175,7 @@ public class tela extends javax.swing.JFrame {
         jButton3.setBounds(520, 250, 120, 61);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/willpatcher/bless-online---woman-keyart-1441069414031_632x300.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bless-online---woman-keyart-1441069414031_632x300.jpg"))); // NOI18N
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 632, 300);
