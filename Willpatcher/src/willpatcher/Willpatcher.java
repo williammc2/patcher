@@ -55,7 +55,7 @@ public class Willpatcher extends JPanel {
         }
         in.close();
 
-        if (!"10".equals(inputLine)) {
+        if (!"11".equals(inputLine)) {
             JOptionPane.showMessageDialog(null, "Seu Patcher precisa ser atualizado!  Após clicar em OK o Patch será atualizado.");
 
             caminho = Willpatcher.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
