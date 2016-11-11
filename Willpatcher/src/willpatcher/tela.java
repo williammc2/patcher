@@ -16,6 +16,8 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -29,13 +31,15 @@ public class tela extends javax.swing.JFrame {
     String disco = null;
     coreano coreano_lista = new coreano();
     russo russo_lista = new russo();
+    version verify_version = new version();
     
 
     /**
      * Creates new form tela
      */
-    public tela() {
+    public tela() throws IOException {
         initComponents();
+        version_check.setText("Version:"+verify_version.getversion());
         ArrayList<String> loadlist_russo = russo_lista.getrusso();
         ArrayList<String> loadlist_coreano = coreano_lista.getcoreano();
 
@@ -64,6 +68,7 @@ public class tela extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        version_check = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -99,7 +104,7 @@ public class tela extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Tradução PT_BR  para Bless Russo ou Koreano");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 270, 450, 24);
+        jLabel2.setBounds(100, 270, 450, 24);
 
         informcaoes.setForeground(new java.awt.Color(255, 255, 255));
         informcaoes.setText("Selecione o Diretorio do jogo.");
@@ -177,6 +182,11 @@ public class tela extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3);
         jButton3.setBounds(520, 250, 120, 61);
+
+        version_check.setForeground(new java.awt.Color(255, 0, 51));
+        version_check.setText("Version:");
+        getContentPane().add(version_check);
+        version_check.setBounds(10, 270, 140, 20);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bless-online---woman-keyart-1441069414031_632x300.jpg"))); // NOI18N
@@ -428,7 +438,11 @@ public class tela extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tela().setVisible(true);
+                try {
+                    new tela().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(tela.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -449,5 +463,6 @@ public class tela extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JComboBox<String> selecione_jogo;
+    private javax.swing.JLabel version_check;
     // End of variables declaration//GEN-END:variables
 }

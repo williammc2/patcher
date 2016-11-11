@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import static java.lang.System.in;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
@@ -30,32 +31,13 @@ public class Willpatcher extends JPanel {
      */
     public static void main(String[] args) throws MalformedURLException, IOException, URISyntaxException {
         // TODO code application logic here
-
+        version verify_version = new version();
         String caminho = null;
         tela jn = new tela();
         jn.setLocationRelativeTo(null);
         jn.setVisible(true);
 
-        String url = "http://mmobrazil.com/patcher_files/version.txt";
-
-        URL obj = new URL(url);
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-        con.setRequestMethod("GET"); //metodo get para pegar a informação do arquivo txt
-
-        int responseCode = con.getResponseCode();
-
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(con.getInputStream())); // vai iniciar o bufffer para ler o arquivo
-        String inputLine;
-        StringBuffer response = new StringBuffer();
-
-        while ((inputLine = in.readLine()) == "1") { // vai ler todo o arquivo linha por linha e adicionar na string inputline
-            response.append(inputLine);
-        }
-        in.close();
-
-        if (!"11".equals(inputLine)) {
+        if (!"12".equals(verify_version.getversion())) {
             JOptionPane.showMessageDialog(null, "Seu Patcher precisa ser atualizado!  Após clicar em OK o Patch será atualizado.");
 
             caminho = Willpatcher.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
@@ -75,14 +57,15 @@ public class Willpatcher extends JPanel {
                 }
                 out.flush();
                 out.close();
+                JOptionPane.showMessageDialog(null, "Patcher atualizado com sucesso! Favor abrir o novo Patcher salvo em " + caminho + "Willpatcher.jar");
                 in.close();
+                System.exit(0);
+
             } catch (IOException e) {
                 e.printStackTrace();
                 System.exit(0);
 
             }
-            JOptionPane.showMessageDialog(null, "Patcher atualizado com sucesso! Favor abrir o novo Patcher salvo em " + caminho + "Willpatcher.jar");
-            System.exit(0);
 
         }
 
