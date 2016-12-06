@@ -25,9 +25,9 @@ import javax.swing.JOptionPane;
  *
  * @author William mendes
  */
-public class tela extends javax.swing.JFrame {
+public class telabck extends javax.swing.JFrame {
     String diretorio = null;
-    String versao = "RUSSO";
+    String versao = null;
     String disco = null;
     coreano coreano_lista = new coreano();
     russo russo_lista = new russo();
@@ -37,7 +37,7 @@ public class tela extends javax.swing.JFrame {
     /**
      * Creates new form tela
      */
-    public tela() throws IOException {
+    public telabck() throws IOException {
         initComponents();
         version_check.setText("Version:"+verify_version.getversion());
         ArrayList<String> loadlist_russo = russo_lista.getrusso();
@@ -61,8 +61,11 @@ public class tela extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         download_tag = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        selecione_jogo = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         version_check = new javax.swing.JLabel();
@@ -83,7 +86,7 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(combobox);
-        combobox.setBounds(20, 210, 100, 20);
+        combobox.setBounds(20, 240, 100, 20);
 
         botao.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         botao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/downloadbutton2.png"))); // NOI18N
@@ -99,14 +102,14 @@ public class tela extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Tradução PT_BR  para Bless Russo");
+        jLabel2.setText("Tradução PT_BR  para Bless Russo ou Koreano");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(200, 270, 450, 24);
+        jLabel2.setBounds(100, 270, 450, 24);
 
         informcaoes.setForeground(new java.awt.Color(255, 255, 255));
         informcaoes.setText("Selecione o Diretorio do jogo.");
         getContentPane().add(informcaoes);
-        informcaoes.setBounds(20, 180, 200, 30);
+        informcaoes.setBounds(20, 210, 200, 30);
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Status:");
@@ -121,6 +124,20 @@ public class tela extends javax.swing.JFrame {
         jLabel7.setText("Desenvolvido por: William Mendes");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(10, 0, 240, 14);
+
+        selecione_jogo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "RUSSO", "COREANO"}));
+        selecione_jogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selecione_jogoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(selecione_jogo);
+        selecione_jogo.setBounds(20, 190, 90, 20);
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Escolha Russo ou Koreano:");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(20, 170, 170, 14);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/YouTube-icon.png"))); // NOI18N
@@ -140,7 +157,11 @@ public class tela extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(490, 90, 210, 14);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo ASH.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guild.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(40, 110, 80, 20);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logan_guild_low_size.png"))); // NOI18N
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +170,7 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(-10, 10, 190, 170);
+        jButton2.setBounds(20, 30, 130, 90);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pagseguro (1).png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -373,6 +394,11 @@ public class tela extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void selecione_jogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecione_jogoActionPerformed
+        // TODO add your handling code here:
+        versao = (String) selecione_jogo.getSelectedItem();
+    }//GEN-LAST:event_selecione_jogoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -391,21 +417,23 @@ public class tela extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tela.class
+            java.util.logging.Logger.getLogger(telabck.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tela.class
+            java.util.logging.Logger.getLogger(telabck.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tela.class
+            java.util.logging.Logger.getLogger(telabck.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tela.class
+            java.util.logging.Logger.getLogger(telabck.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -413,9 +441,9 @@ public class tela extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new tela().setVisible(true);
+                    new telabck().setVisible(true);
                 } catch (IOException ex) {
-                    Logger.getLogger(tela.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(telabck.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
@@ -431,9 +459,12 @@ public class tela extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JComboBox<String> selecione_jogo;
     private javax.swing.JLabel version_check;
     // End of variables declaration//GEN-END:variables
 }
