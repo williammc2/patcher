@@ -37,7 +37,7 @@ public class Willpatcher extends JPanel {
         jn.setLocationRelativeTo(null);
         jn.setVisible(true);
 
-        if (!"12".equals(verify_version.getversion())) {
+        if (!"13".equals(verify_version.getversion())) {
             JOptionPane.showMessageDialog(null, "Seu Patcher precisa ser atualizado!  Após clicar em OK o Patch será atualizado.");
 
             caminho = Willpatcher.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
