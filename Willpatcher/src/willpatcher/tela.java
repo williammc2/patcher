@@ -56,7 +56,6 @@ public class tela extends javax.swing.JFrame {
 
         combobox = new javax.swing.JComboBox<>();
         botao = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         informcaoes = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         download_tag = new javax.swing.JTextField();
@@ -70,9 +69,9 @@ public class tela extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(0, 0));
-        setMinimumSize(new java.awt.Dimension(632, 325));
+        setMinimumSize(new java.awt.Dimension(590, 557));
         setResizable(false);
-        setSize(new java.awt.Dimension(659, 300));
+        setSize(new java.awt.Dimension(585, 533));
         getContentPane().setLayout(null);
 
         combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ","MANUAL", "A:", "B:", "C:", "D:","E:","F:","G:","H:","I:","J:","K:","L:","M:","N:", }));
@@ -83,7 +82,7 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(combobox);
-        combobox.setBounds(20, 210, 100, 20);
+        combobox.setBounds(60, 280, 100, 20);
 
         botao.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         botao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/downloadbutton2.png"))); // NOI18N
@@ -95,27 +94,26 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(botao);
-        botao.setBounds(250, 190, 200, 50);
-
-        jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI Light", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Tradução PT_BR  para Bless Russo");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(200, 270, 450, 24);
+        botao.setBounds(20, 200, 200, 50);
 
         informcaoes.setForeground(new java.awt.Color(255, 255, 255));
         informcaoes.setText("Selecione o Diretorio do jogo.");
         getContentPane().add(informcaoes);
-        informcaoes.setBounds(20, 180, 200, 30);
+        informcaoes.setBounds(60, 250, 200, 30);
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Status:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(204, 250, 40, 14);
+        jLabel4.setBounds(20, 310, 40, 14);
 
         download_tag.setEditable(false);
+        download_tag.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                download_tagActionPerformed(evt);
+            }
+        });
         getContentPane().add(download_tag);
-        download_tag.setBounds(250, 250, 240, 20);
+        download_tag.setBounds(60, 310, 250, 20);
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Desenvolvido por: William Mendes");
@@ -133,14 +131,15 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(520, 110, 50, 40);
+        jButton1.setBounds(380, 480, 50, 40);
 
         jLabel9.setForeground(new java.awt.Color(255, 51, 51));
         jLabel9.setText(" Inscreva-se no Canal!");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(490, 90, 210, 14);
+        jLabel9.setBounds(350, 460, 210, 14);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo ASH.png"))); // NOI18N
+        jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +148,7 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(-10, 10, 190, 170);
+        jButton2.setBounds(430, 20, 140, 150);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pagseguro (1).png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -160,18 +159,18 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(520, 250, 120, 61);
+        jButton3.setBounds(450, 470, 120, 61);
 
         version_check.setForeground(new java.awt.Color(255, 0, 51));
         version_check.setText("Version:");
         getContentPane().add(version_check);
-        version_check.setBounds(10, 270, 140, 20);
+        version_check.setBounds(10, 510, 140, 20);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bless-online---woman-keyart-1441069414031_632x300.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/123.jpg"))); // NOI18N
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 632, 300);
+        jLabel1.setBounds(0, 0, 600, 530);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -373,6 +372,10 @@ public class tela extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void download_tagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_download_tagActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_download_tagActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -430,7 +433,6 @@ public class tela extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
