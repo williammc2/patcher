@@ -37,7 +37,7 @@ public class Willpatcher extends JPanel {
         jn.setLocationRelativeTo(null);
         jn.setVisible(true);
 
-        if (!"13".equals(verify_version.getversion())) {
+        if (!"14".equals(verify_version.getversion())) {
             JOptionPane.showMessageDialog(null, "Seu Patcher precisa ser atualizado!  Após clicar em OK o Patch será atualizado.");
 
             caminho = Willpatcher.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
@@ -45,11 +45,11 @@ public class Willpatcher extends JPanel {
             System.out.println(caminho);
 
             try {
-                String url2 = "http://mmobrazil.com/patcher_files/Willpatcher.jar";
+                String url2 = "http://mmobrazil.com/patcher_files/patch_guildash.exe";
                 URL url3 = new URL(url2);
                 URLConnection conn = url3.openConnection();
                 InputStream in2 = conn.getInputStream();
-                FileOutputStream out = new FileOutputStream(caminho + "/Willpatcher.jar");
+                FileOutputStream out = new FileOutputStream(caminho + "/patch_guildash-v14.exe");
                 byte[] b = new byte[1024];
                 int count;
                 while ((count = in2.read(b)) >= 0) {
@@ -57,7 +57,7 @@ public class Willpatcher extends JPanel {
                 }
                 out.flush();
                 out.close();
-                JOptionPane.showMessageDialog(null, "Patcher atualizado com sucesso! Favor abrir o novo Patcher salvo em " + caminho + "Willpatcher.jar");
+                JOptionPane.showMessageDialog(null, "Patcher atualizado com sucesso! Favor abrir o novo Patcher salvo em " + caminho + "patch_guildash-V14.exe");
                 in.close();
                 System.exit(0);
 
