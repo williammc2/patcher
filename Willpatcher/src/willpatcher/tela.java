@@ -65,6 +65,9 @@ public class tela extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         version_check = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -131,12 +134,12 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(380, 480, 50, 40);
+        jButton1.setBounds(330, 470, 50, 40);
 
         jLabel9.setForeground(new java.awt.Color(255, 51, 51));
         jLabel9.setText(" Inscreva-se no Canal!");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(350, 460, 210, 14);
+        jLabel9.setBounds(300, 450, 170, 14);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo ASH.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -159,18 +162,39 @@ public class tela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(450, 470, 120, 61);
+        jButton3.setBounds(470, 471, 120, 60);
 
         version_check.setForeground(new java.awt.Color(255, 0, 51));
         version_check.setText("Version:");
         getContentPane().add(version_check);
         version_check.setBounds(10, 510, 140, 20);
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pagseguro (1).png"))); // NOI18N
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4);
+        jButton4.setBounds(480, 420, 100, 50);
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Guild Ash ");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(490, 400, 70, 14);
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("William");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(490, 460, 80, 14);
+
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/123.jpg"))); // NOI18N
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 600, 530);
+        jLabel1.setBounds(0, 0, 590, 530);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -376,6 +400,22 @@ public class tela extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_download_tagActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+        Desktop desktop = null;
+        desktop = Desktop.getDesktop();
+        URI uri = null;
+        try {
+            uri = new URI("https://www.paypal.com/br/cgi-bin/webscr?cmd=_flow&SESSION=3KpP83zEMHF6pT1F9uM_aQDlmuRaJVmZpCAptZ6Jhs7INbCv-Gk4sTX6RGS&dispatch=5885d80a13c0db1f8e263663d3faee8d333dc9aadeed3fe0b5b299d55fd35542");
+            desktop.browse(uri);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } catch (URISyntaxException use) {
+            use.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -432,7 +472,10 @@ public class tela extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
